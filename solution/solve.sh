@@ -7,6 +7,7 @@ sleep 2
 
 # Create the distributed lock implementation
 cat > /app/distributed_lock.py << 'PYTHON_EOF'
+# -*- coding: utf-8 -*-
 import redis
 import threading
 import time
@@ -210,6 +211,7 @@ PYTHON_EOF
 
 # Create the test file
 cat > /app/test_lock.py << 'PYTHON_EOF'
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """Test suite for distributed lock"""
 
